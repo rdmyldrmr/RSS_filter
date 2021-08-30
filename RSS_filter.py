@@ -102,24 +102,24 @@ with open('rsslog.txt', 'a') as f:
         
         
         
-current_news_headline = pyautogui.screenshot(region=(350,196,750,154))
-current_news_headline.show()
-current_news_headline_rgb = current_news_headline.convert('RGB')
-current_news_headline_grayscale = ImageOps.grayscale(current_news_headline_rgb)
-current_news_headline_inverted = ImageOps.invert(current_news_headline_grayscale)
-current_news_headline_inverted_edge_more = current_news_headline_inverted.filter(ImageFilter.EDGE_ENHANCE_MORE)
-current_headline_text = pytesseract.image_to_string(current_news_headline_inverted_edge_more)
-current_headline_text = current_headline_text.replace("'",' ')
-current_headline_text = current_headline_text.replace(":",' ')
-current_headline_text = current_headline_text.replace("’",' ')
-current_headline_text = current_headline_text.replace(",",' ')
-current_headline_text = current_headline_text.replace("‘",' ')
-text_lower=current_headline_text.lower()
-news_headline = text_lower.split('\n\n')
-news_headline_singleline = news_headline[0]
-news_headline_singleline = news_headline_singleline.replace("\n", " ")
-news_headline_words = news_headline_singleline.split()
-print(news_headline_words)
+# current_news_headline = pyautogui.screenshot(region=(350,196,750,154))
+# current_news_headline.show()
+# current_news_headline_rgb = current_news_headline.convert('RGB')
+# current_news_headline_grayscale = ImageOps.grayscale(current_news_headline_rgb)
+# current_news_headline_inverted = ImageOps.invert(current_news_headline_grayscale)
+# current_news_headline_inverted_edge_more = current_news_headline_inverted.filter(ImageFilter.EDGE_ENHANCE_MORE)
+# current_headline_text = pytesseract.image_to_string(current_news_headline_inverted_edge_more)
+# current_headline_text = current_headline_text.replace("'",' ')
+# current_headline_text = current_headline_text.replace(":",' ')
+# current_headline_text = current_headline_text.replace("’",' ')
+# current_headline_text = current_headline_text.replace(",",' ')
+# current_headline_text = current_headline_text.replace("‘",' ')
+# text_lower=current_headline_text.lower()
+# news_headline = text_lower.split('\n\n')
+# news_headline_singleline = news_headline[0]
+# news_headline_singleline = news_headline_singleline.replace("\n", " ")
+# news_headline_words = news_headline_singleline.split()
+# print(news_headline_words)
         
 
 
